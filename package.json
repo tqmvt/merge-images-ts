@@ -1,0 +1,51 @@
+{
+  "name": "merge-images-ts",
+  "version": "2.0.1",
+  "description": "Easily compose images together without messing around with canvas",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es2015.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "test": "nyc ava",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "prelint": "npm run build",
+    "lint": "xo",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tqmvt/merge-images-ts.git"
+  },
+  "keywords": [
+    "compose",
+    "merge",
+    "images",
+    "without",
+    "no",
+    "canvas"
+  ],
+  "author": "https://x.com/_tqmvt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tqmvt/merge-images-ts/issues"
+  },
+  "homepage": "https://github.com/tqmvt/merge-images-ts",
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "camelcase": "^5.0.0",
+    "canvas": "^2.6.1",
+    "coveralls": "^3.0.0",
+    "datauri": "^1.0.5",
+    "nyc": "^11.0.2",
+    "pify": "^3.0.0",
+    "rollup": "^0.59.0",
+    "rollup-plugin-buble": "^0.19.2",
+    "xo": "^0.18.2"
+  }
+}
